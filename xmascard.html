@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Design your own Christmas Card</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+		
+
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Create a Christmas Card!</h1></header>
+            
+            	<div id="card"> 
+	            	<div class="front">            	
+	                <img src="christmas-card_loop-jumper.gif" alt="Christmas Card">
+	            	</div>
+	            	<div class="back">
+	            	<div id="to">To:</div>
+	            	<div id="from">From:</div>
+	            	<div id="message">Message:</div>
+	            	</div>
+				</div>
+
+            <div class="mail">
+                <form><span id="emailaddress">Email address:  </span>
+                    <input type="text" name="mail">
+                    <button class="send">Send</button>
+                    <button class="print">Print</button>
+                </form>
+            
+        	
+</body>
+<script>
+$("#card").flip();
+</script>
+
+
+
+
+
+</html>
