@@ -25,23 +25,48 @@
 	                <img src="christmas-card_loop-jumper.gif" alt="Christmas Card">
 	            	</div>
 	            	<div class="back">
-	            	<div id="to">To:</div>
-	            	<div id="from">From:</div>
-	            	<div id="message">Message:</div>
+	            	<div id="to"></div>
+	            	<div id="from"></div>
+	            	<div id="message"></div>
 	            	</div>
+
 				</div>
+				<div class="buttonarea">
+				
+
+				<img class="clickme" src="clickme.png" alt="click here" height=42.5 width= 100>
+				<button class="edit" onclick="custFunction()">Customize Card</button>
+				</div>
+
 
             <div class="mail">
                 <form><span id="emailaddress">Email address:  </span>
                     <input type="text" name="mail">
-                    <button class="send">Send</button>
-                    <button class="print">Print</button>
+                    <button type="button" onclick="myFunction()" class="send">Send</button>
+                    <button type="button" onclick="otherFunction()" class="print">Print</button>
                 </form>
             
         	
 </body>
 <script>
-$("#card").flip();
+$("#card").flip()
+
+function custFunction(){
+var recipient = prompt("Whom to send to?");
+var sender = prompt("What is the sender's name?");
+var specialMessage = prompt("Type a message for the recipient");
+document.getElementById("to").innerHTML = "<strong>To:   </strong>" + recipient;
+document.getElementById("from").innerHTML = "<strong>From:    </strong>" + sender;
+document.getElementById("message").innerHTML = "<strong>Message:   </strong> " + specialMessage;
+};
+
+function myFunction() {
+	alert("Your card has been delivered!");
+};
+
+function otherFunction(){
+	alert("Your printer is broken, try again next Christmas");
+};
 </script>
 
 
